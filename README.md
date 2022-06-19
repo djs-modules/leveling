@@ -19,7 +19,7 @@
 
 ```js
 const { Client, Intents } = require("discord.js");
-const { Moderation } = require("@djs-modules/moderation");
+const { Manager } = require("@djs-modules/leveling");
 
 const client = new Client({
   intents: [
@@ -31,29 +31,16 @@ const client = new Client({
   ],
 });
 
-const moderation = new Moderation(client, {
+const leveling = new Manager({
+  dbName: "leveling",
   dbPath: "./",
-  locale: "en-US",
-  defaultSystems: {
-    autoRole: false,
-    antiSpam: false,
-    antiInvite: false,
-    antiJoin: false,
-    antiLink: false,
-    blacklist: false,
-    ghostPing: false,
-    logSystem: false,
-  },
 });
 ```
 
 ## This module uses
 
 <span><strong>[1] [Discord.JS](https://npmjs.com/package/discord.js/)</strong></span> <br />
-<span><strong>[2] [colors](https://npmjs.com/package/colors/)</strong></span> <br />
-<span><strong>[3] [ms](https://npmjs.com/package/ms/)</strong></span> <br />
-<span><strong>[4] [node-fetch](https://npmjs.com/package/node-fetch/)</strong></span> <br />
-<span><strong>[5] [enmap (database)](https://npmjs.com/package/enmap/)</strong></span> <br />
+<span><strong>[2] [enmap (database)](https://npmjs.com/package/enmap/)</strong></span> <br />
 
 ## Links
 
