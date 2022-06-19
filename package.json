@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./types/Leveling.d.ts",
   "scripts": {
-    "postinstall": "tsc -p tsconfig.json"
+    "postinstall": "tsc -p tsconfig.json",
+    "docs": "docgen -s src/*.ts src/**/*.ts -o docs/docs.json -c pages/index.yml -g -S 1 -j .jsconfig.json"
   },
   "keywords": [
     "discord-js",
