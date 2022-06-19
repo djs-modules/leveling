@@ -6,7 +6,7 @@ import chalk from "chalk";
  */
 export class Logger {
   /**
-   * @returns {String}
+   * @returns {string}
    */
   get time() {
     return new Date().toLocaleString("ru");
@@ -14,8 +14,8 @@ export class Logger {
 
   /**
    *
-   * @param {String} message
-   * @param {String} tag
+   * @param {string} message
+   * @param {string} tag
    * @returns {void}
    */
   log(message, tag) {
@@ -24,8 +24,8 @@ export class Logger {
 
   /**
    *
-   * @param {String} message
-   * @param {String} tag
+   * @param {string} message
+   * @param {string} tag
    * @returns {void}
    */
   warn(message, tag) {
@@ -36,8 +36,8 @@ export class Logger {
 
   /**
    *
-   * @param {String} message
-   * @param {String} tag
+   * @param {string} message
+   * @param {string} tag
    * @returns {void}
    */
   error(message, tag) {

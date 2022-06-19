@@ -26,7 +26,7 @@ export class Database {
 
     /**
      * Database
-     * @type {Enmap<String, GuildData>}
+     * @type {Enmap<string, GuildData>}
      */
     this.database = new Enmap({
       name: this.options.dbName,
@@ -44,10 +44,10 @@ export class Database {
   /**
    * Method that adds number to property
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {keyof GuildMember} prop Property to change
-   * @param {Number} value Value to Add
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {string} prop Property to change
+   * @param {number} value Value to Add
    *
    * @returns {Promise<GuildMember>}
    */
@@ -83,10 +83,10 @@ export class Database {
   /**
    * Method that subtracts number from property
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {keyof GuildMember} prop Property to change
-   * @param {Number} value Value to Subtract
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {string} prop Property to change
+   * @param {number} value Value to Subtract
    *
    * @returns {Promise<GuildMember>}
    */
@@ -122,7 +122,7 @@ export class Database {
   /**
    * Method that Sets new Guild Data
    *
-   * @param {String} guildID Guild ID
+   * @param {string} guildID Guild ID
    * @param {GuildData} data New Guild Data
    *
    * @returns {Promise<GuildData>}
@@ -148,7 +148,7 @@ export class Database {
   /**
    * Method that creates Guild Data
    *
-   * @param {String} guildID Guild ID
+   * @param {string} guildID Guild ID
    * @returns {Promise<GuildData>}
    */
   createGuildData(guildID: string): Promise<GuildData> {
@@ -177,8 +177,8 @@ export class Database {
   /**
    * Method that creates Guild Member Data
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
    * @returns {Promise<GuildMember>}
    */
   createMemberData(memberID: string, guildID: string): Promise<GuildMember> {
@@ -216,7 +216,7 @@ export class Database {
   /**
    * Method that returns Guild Member Data
    *
-   * @param {String} guildID Guild ID
+   * @param {string} guildID Guild ID
    * @returns {Promise<GuildData>}
    */
   getData(guildID: string): Promise<GuildData> {

@@ -31,9 +31,9 @@ export class LevelManager {
   /**
    * The method responsible for adding Level to the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Add
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Add
    *
    * @returns {Promise<GuildMember>}
    */
@@ -50,9 +50,9 @@ export class LevelManager {
   /**
    * The method responsible for subtracting Level from the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Subtract
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Subtract
    *
    * @returns {Promise<GuildMember>}
    */
@@ -79,9 +79,9 @@ export class LevelManager {
   /**
    * The method responsible for setting Level to the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Set
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Set
    *
    * @returns {Promise<GuildMember>}
    */

@@ -55,8 +55,8 @@ export class Manager {
   /**
    * Method that returns member statistics (XP, Level)
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
    * @returns {Promise<GuildMember>}
    */
   getStatistics(memberID: string, guildID: string): Promise<GuildMember> {

@@ -34,9 +34,9 @@ export class XPManager extends TypedEmitter<ManagerEvents> {
   /**
    * The method responsible for adding XP to the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Add
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Add
    *
    * @returns {Promise<GuildMember>}
    */
@@ -68,9 +68,9 @@ export class XPManager extends TypedEmitter<ManagerEvents> {
   /**
    * The method responsible for subtracting XP from the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Subtract
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Subtract
    *
    * @returns {Promise<GuildMember>}
    */
@@ -97,9 +97,9 @@ export class XPManager extends TypedEmitter<ManagerEvents> {
   /**
    * The method responsible for setting XP to the user.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
-   * @param {Number} amount Amount to Set
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
+   * @param {number} amount Amount to Set
    *
    * @returns {Promise<GuildMember>}
    */
@@ -117,8 +117,8 @@ export class XPManager extends TypedEmitter<ManagerEvents> {
   /**
    * A method showing the required amount of XP for the next level.
    *
-   * @param {String} memberID Member ID
-   * @param {String} guildID Guild ID
+   * @param {string} memberID Member ID
+   * @param {string} guildID Guild ID
    *
    * @returns {Promise<Number>}
    */
