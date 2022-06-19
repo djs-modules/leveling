@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./types/Leveling.d.ts",
   "scripts": {
-    "postinstall": "rm -r dist && tsc -p tsconfig.json"
+    "postinstall": "tsc -p tsconfig.json"
   },
   "keywords": [
     "discord-js",
