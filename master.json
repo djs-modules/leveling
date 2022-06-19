@@ -1,0 +1,814 @@
+{
+ "meta": {
+  "generator": "0.11.1",
+  "format": 22,
+  "date": 1655652008769
+ },
+ "custom": {
+  "general": {
+   "name": "General",
+   "files": {
+    "welcome": {
+     "name": "Welcome",
+     "type": "md",
+     "content": "## Welcome!\n\n<strong>Welcome, this is '@djs-modules/leveling' module!</strong> <br />\n<strong>\"@djs-modules/leveling\" is a module that allows you to make a level system in your Discord bot.</strong>\n\n## Features\n\n<span><strong>[🔑] Built in TypeScript</strong></span> <br />\n<span><strong>[⚙] 100% Promise-based</strong></span> <br />\n<span><strong>[🙂] TypeScript Support</strong></span> <br />\n<span><strong>[👍] Discord.JS v13</strong></span>\n\n## Requirements\n\n<span><strong>[1] [NodeJS v16 or Above](https://nodejs.org/)</strong></span> <br />\n<span><strong>[2] [Discord.JS](https://npmjs.com/package/discord.js/)</strong></span> <br />\n\n## Quick Example\n\n```js\nconst { Client, Intents } = require(\"discord.js\");\nconst { Manager } = require(\"@djs-modules/leveling\");\n\nconst client = new Client({\n  intents: [\n    \"GUILDS\",\n    \"GUILD_MESSAGES\",\n    \"GUILD_PRESENCES\",\n    \"GUILD_MEMBERS\",\n    \"GUILD_BANS\",\n  ],\n});\n\nconst leveling = new Manager({\n  dbName: \"leveling\",\n  dbPath: \"./\",\n});\n```\n\n## This module uses\n\n<span><strong>[1] [Discord.JS](https://npmjs.com/package/discord.js/)</strong></span> <br />\n<span><strong>[2] [enmap (database)](https://npmjs.com/package/enmap/)</strong></span> <br />\n\n## Links\n\n<span><strong>[1] [Documentation (soon)](https://djs-modules.js.org/)</strong></span> <br />\n<span><strong>[2] [Module Author](https://npmjs.com/~djs-modules/)</strong></span> <br />\n<span><strong>[3] [Support Server](https://discord.gg/zsTgXs24k2/)</strong></span>\n",
+     "path": "pages/general/welcome.md"
+    }
+   }
+  }
+ },
+ "classes": [
+  {
+   "name": "Database",
+   "description": "The class responsible for the module database.",
+   "construct": {
+    "name": "Database",
+    "params": [
+     {
+      "name": "options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Database Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 21,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "database",
+     "description": "Database",
+     "type": [
+      [
+       [
+        "Enmap",
+        "<"
+       ],
+       [
+        "string",
+        ", "
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 27,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "logger",
+     "description": "Module Logger",
+     "type": [
+      [
+       [
+        "Logger"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 37,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "add",
+     "description": "Method that adds number to property",
+     "params": [
+      {
+       "name": "memberID",
+       "description": "Member ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "prop",
+       "description": "Property to change",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "value",
+       "description": "Value to Add",
+       "type": [
+        [
+         [
+          "number"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildMember",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 44,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "subtract",
+     "description": "Method that subtracts number from property",
+     "params": [
+      {
+       "name": "memberID",
+       "description": "Member ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "prop",
+       "description": "Property to change",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "value",
+       "description": "Value to Subtract",
+       "type": [
+        [
+         [
+          "number"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildMember",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 83,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "set",
+     "description": "Method that Sets new Guild Data",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "data",
+       "description": "New Guild Data",
+       "type": [
+        [
+         [
+          "GuildData"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 122,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "createGuildData",
+     "description": "Method that creates Guild Data",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 148,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "createMemberData",
+     "description": "Method that creates Guild Member Data",
+     "params": [
+      {
+       "name": "memberID",
+       "description": "Member ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildMember",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 177,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "getData",
+     "description": "Method that returns Guild Member Data",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 216,
+      "file": "Database.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 12,
+    "file": "Database.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "Manager",
+   "description": "The main class that controls the level system.",
+   "construct": {
+    "name": "Manager",
+    "params": [
+     {
+      "name": "options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Module Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 24,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "database",
+     "description": "Database",
+     "type": [
+      [
+       [
+        "Database"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 30,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "ready",
+     "description": "Module State",
+     "type": [
+      [
+       [
+        "boolean"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 36,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "xp",
+     "description": "XP Manager",
+     "type": [
+      [
+       [
+        "XPManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 42,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "level",
+     "description": "Level Manager",
+     "type": [
+      [
+       [
+        "LevelManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 48,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "getStatistics",
+     "description": "Method that returns member statistics (XP, Level)",
+     "params": [
+      {
+       "name": "memberID",
+       "description": "Member ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildMember",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 55,
+      "file": "Leveling.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 15,
+    "file": "Leveling.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "Logger",
+   "description": "The class responsible for logging in the console.",
+   "methods": [
+    {
+     "name": "log",
+     "params": [
+      {
+       "name": "message",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "tag",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "void"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 28,
+      "file": "Logger.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "warn",
+     "params": [
+      {
+       "name": "message",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "tag",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "void"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 28,
+      "file": "Logger.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "error",
+     "params": [
+      {
+       "name": "message",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "tag",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "void"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 28,
+      "file": "Logger.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 3,
+    "file": "Logger.ts",
+    "path": "src/classes"
+   }
+  }
+ ],
+ "interfaces": [],
+ "typedefs": [
+  {
+   "name": "Options",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "dbName",
+     "description": "Database Name",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "dbPath",
+     "description": "Path for Database File",
+     "optional": true,
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 72,
+    "file": "Leveling.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "GuildData",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "id",
+     "description": "Guild ID",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "members",
+     "description": "Guild Members Data",
+     "type": [
+      [
+       [
+        "Array",
+        "<"
+       ],
+       [
+        "GuildMember",
+        ">"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 78,
+    "file": "Leveling.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "GuildMember",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "id",
+     "description": "Member ID",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "level",
+     "description": "Member Level",
+     "type": [
+      [
+       [
+        "number"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "xp",
+     "description": "Member XP",
+     "type": [
+      [
+       [
+        "number"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 84,
+    "file": "Leveling.ts",
+    "path": "src/classes"
+   }
+  }
+ ],
+ "externals": []
+}
