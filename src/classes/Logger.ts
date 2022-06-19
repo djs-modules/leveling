@@ -6,20 +6,13 @@ import chalk from "chalk";
  */
 export class Logger {
   /**
-   * @returns {string}
-   */
-  get time() {
-    return new Date().toLocaleString("ru");
-  }
-
-  /**
    *
    * @param {string} message
    * @param {string} tag
    * @returns {void}
    */
   log(message, tag) {
-    return console.log(`[${this.time} | ${tag}] ${chalk.green(message)}`);
+    return console.log(`[${tag}] ${chalk.green(message)}`);
   }
 
   /**
@@ -29,9 +22,7 @@ export class Logger {
    * @returns {void}
    */
   warn(message, tag) {
-    return console.log(
-      `[${this.time} | ${tag}] ${chalk.yellowBright(message)}`
-    );
+    return console.log(`[${tag}] ${chalk.yellowBright(message)}`);
   }
 
   /**
@@ -41,6 +32,6 @@ export class Logger {
    * @returns {void}
    */
   error(message, tag) {
-    return console.log(`[${this.time} | ${tag}] ${chalk.red(message)}`);
+    return console.log(`[${tag}] ${chalk.red(message)}`);
   }
 }
